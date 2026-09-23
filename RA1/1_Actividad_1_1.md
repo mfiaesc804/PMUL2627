@@ -8,7 +8,7 @@ para dispositivos móviles evaluando sus características y capacidades.**
 
 ------------------------------------------------------------------------
 
-## 🎯 Objetivos
+## Objetivos
 
 Con esta actividad aprenderás a:
 
@@ -24,7 +24,7 @@ Con esta actividad aprenderás a:
 
 ------------------------------------------------------------------------
 
-## 📝 Enunciado
+## Enunciado
 
 Los dispositivos móviles presentan características y limitaciones
 diferentes a las de un ordenador convencional. Estas pueden afectar
@@ -44,7 +44,7 @@ Para **cada limitación** identificada deberás explicar:
 
 ------------------------------------------------------------------------
 
-## 🔍 Aspectos que debes investigar
+## Aspectos que debes investigar
 
 Como mínimo, tu trabajo deberá abordar los siguientes aspectos:
 
@@ -87,7 +87,7 @@ Como mínimo, tu trabajo deberá abordar los siguientes aspectos:
 
 ------------------------------------------------------------------------
 
-## 🧩 Ejemplo de lo que se pide
+## Ejemplo de lo que se pide
 
 > ⚠️ **No puedes utilizar este ejemplo como uno de los apartados de tu
 > trabajo.**
@@ -105,13 +105,13 @@ trabajar temporalmente con información almacenada localmente.
 **Ejemplo:** una aplicación de noticias podría mostrar las últimas
 noticias descargadas aunque temporalmente no exista conexión.
 
-### 🔗 Idea fundamental
+### Idea fundamental
 
 **LIMITACIÓN → PROBLEMA → BUENA PRÁCTICA → EJEMPLO**
 
 ------------------------------------------------------------------------
 
-## 🤔 Parte final: conclusiones
+## Parte final: conclusiones
 
 Finaliza el documento respondiendo brevemente a estas dos preguntas:
 
@@ -127,7 +127,7 @@ conseguir que funcione correctamente? Justifica tu respuesta.**
 
 ------------------------------------------------------------------------
 
-## 🌐 Fuentes de información
+## Fuentes de información
 
 Deberás indicar al final del trabajo las **fuentes utilizadas**.
 
@@ -143,15 +143,15 @@ Deberá indicarse la **página concreta consultada**.
 
 ------------------------------------------------------------------------
 
-## 📤 Entrega
+## Entrega
 
 Entregar **un único documento PDF**.
 
-### 📄 Nombre del archivo
+### Nombre del archivo
 
 `Practica1_NombreApellidos.pdf`
 
-### 📚 Estructura del documento
+### Estructura del documento
 
 1.  Portada.
 2.  Introducción breve.
@@ -167,7 +167,7 @@ explicar algún apartado, pero **no son obligatorios**.
 
 ------------------------------------------------------------------------
 
-## 📊 Rúbrica de evaluación — Práctica 1
+## Rúbrica de evaluación — Práctica 1
 
 **Resultado de aprendizaje:** RA1. Aplica tecnologías de desarrollo para dispositivos móviles evaluando sus características y capacidades.
 
@@ -204,7 +204,7 @@ Esta práctica evalúa dicho criterio mediante la relación:
 
 ------------------------------------------------------------------------
 
-## ⚠️ Requisitos para superar la práctica
+## Requisitos para superar la práctica
 
 No bastará con presentar una lista de limitaciones y otra lista
 independiente de buenas prácticas.

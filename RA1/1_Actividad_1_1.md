@@ -1,4 +1,3 @@
-
 # 📱 Práctica 1. Limitaciones y buenas prácticas en el desarrollo de aplicaciones móviles
 
 **Módulo:** Programación Multimedia y Dispositivos Móviles\
@@ -168,20 +167,43 @@ explicar algún apartado, pero **no son obligatorios**.
 
 ------------------------------------------------------------------------
 
-## 📊 Rúbrica de evaluación
+## 📊 Rúbrica de evaluación — Práctica 1
 
-| Aspecto | Puntuación |
-|---|---:|
-| Identificación de las principales limitaciones de los dispositivos móviles | **2,0** |
-| Explicación de cómo afectan al desarrollo y ejecución de aplicaciones | **2,0** |
-| Buenas prácticas propuestas y relación con las limitaciones | **2,5** |
-| Ejemplos concretos y adecuados | **1,0** |
-| Conclusiones y capacidad de razonamiento | **1,0** |
-| Organización, claridad y presentación | **1,0** |
-| Fuentes utilizadas correctamente indicadas | **0,5** |
-| **TOTAL** | **10 puntos** |
+**Resultado de aprendizaje:** RA1. Aplica tecnologías de desarrollo para dispositivos móviles evaluando sus características y capacidades.
+
+**Criterio de evaluación relacionado:**
+
+**a)** Se han analizado las limitaciones que plantea la ejecución de aplicaciones en los dispositivos móviles.
+
+Esta práctica evalúa dicho criterio mediante la relación:
+
+**Limitación → Consecuencia → Buena práctica justificada → Ejemplo concreto**
+
+### Indicadores y niveles de logro
+
+| Indicador | Excelente | Adecuado | Básico | Insuficiente | Máximo |
+|---|---|---|---|---|---:|
+| **Identificación y explicación de las limitaciones** | Explica correctamente los nueve aspectos solicitados y distingue sus características. **2 puntos** | Aborda siete u ocho aspectos correctamente, o los nueve con alguna imprecisión menor. **1,5 puntos** | Explica entre cuatro y seis aspectos; varias explicaciones son superficiales. **1 punto** | Explica correctamente tres aspectos o menos, o presenta errores importantes. **0 puntos** | **2** |
+| **Análisis de las consecuencias para la aplicación** | Relaciona las limitaciones con efectos concretos sobre el diseño, la ejecución o la experiencia de uso, explicando por qué se producen. **2 puntos** | Establece relaciones correctas en la mayoría de los casos, aunque algunas carecen de explicación. **1,5 puntos** | Identifica algunas consecuencias, pero predominan afirmaciones genéricas o relaciones poco desarrolladas. **1 punto** | Enumera limitaciones sin analizar sus consecuencias o establece relaciones incorrectas. **0 puntos** | **2** |
+| **Buenas prácticas y justificación técnica** | Propone medidas viables y específicas, vinculadas a los problemas detectados, y explica cómo reducen su impacto. **3 puntos** | Propone medidas adecuadas para la mayoría de los problemas, aunque algunas justificaciones son incompletas. **2,25 puntos** | Incluye medidas generales, poco justificadas o sin una relación clara con varios de los problemas. **1,5 puntos** | No propone medidas útiles o las propuestas no responden a los problemas analizados. **0 puntos** | **3** |
+| **Ejemplos concretos y coherentes** | Aporta ejemplos propios y específicos que ilustran claramente las relaciones entre limitación, consecuencia y medida. **1 punto** | Los ejemplos son adecuados en la mayoría de los apartados, aunque alguno resulta poco concreto. **0,75 puntos** | Solo algunos ejemplos permiten comprender el problema; los demás son vagos o repetitivos. **0,5 puntos** | No aporta ejemplos válidos o estos no guardan relación con el análisis. **0 puntos** | **1** |
+| **Conclusiones y capacidad de razonamiento** | Prioriza tres limitaciones con argumentos y explica por qué la calidad de una app implica más que funcionar correctamente. **1 punto** | Responde a las dos cuestiones con argumentos correctos, aunque poco desarrollados. **0,75 puntos** | Responde parcialmente o presenta opiniones con escasa justificación. **0,5 puntos** | No presenta conclusiones o estas no responden a las cuestiones planteadas. **0 puntos** | **1** |
+| **Claridad, organización y fuentes** | El documento permite seguir el análisis con facilidad. Utiliza fuentes técnicas concretas y pertinentes, identificadas mediante título y enlace o referencia. **1 punto** | El documento es comprensible y aporta fuentes concretas, con pequeños problemas de organización o referencia. **0,75 puntos** | La organización dificulta parte de la lectura o las referencias son incompletas y poco vinculadas al contenido. **0,5 puntos** | El documento impide seguir el análisis o no identifica fuentes consultables. **0 puntos** | **1** |
+| **TOTAL** | | | | | **10** |
+
+### Aplicación de la rúbrica
+
+- Se asignará en cada indicador la puntuación del nivel que mejor describa el trabajo.
+- Los nueve aspectos son: **pantalla, interacción, procesador y memoria, almacenamiento, batería, conectividad, sensores y hardware, privacidad y permisos, y diversidad de dispositivos**.
+- Una lista de limitaciones y otra de recomendaciones, sin relacionarlas, no demuestra un análisis suficiente.
+- No se exige programar una aplicación: se evalúa la capacidad de explicar problemas y justificar decisiones de desarrollo.
+- El ejemplo de la aplicación de noticias sin conexión incluido en el enunciado no se contabilizará como ejemplo propio.
+- La claridad y las fuentes apoyan la valoración del trabajo; no sustituyen el análisis técnico exigido por el criterio **RA1.a**.
+
+> **Alcance:** esta rúbrica evalúa la contribución de la práctica al criterio **RA1.a**. No evalúa por sí sola el conjunto de criterios de RA1.
 
 ------------------------------------------------------------------------
+
 ## ⚠️ Requisitos para superar la práctica
 
 No bastará con presentar una lista de limitaciones y otra lista

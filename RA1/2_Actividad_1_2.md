@@ -8,7 +8,7 @@ para dispositivos móviles evaluando sus características y capacidades.**
 
 ------------------------------------------------------------------------
 
-## 🎯 Objetivos
+## Objetivos
 
 Con esta actividad aprenderás a:
 
@@ -25,7 +25,7 @@ Con esta actividad aprenderás a:
 
 ------------------------------------------------------------------------
 
-## 📝 Enunciado
+## Enunciado
 
 Android e iOS son las dos principales plataformas de desarrollo para
 dispositivos móviles. Aunque ambas permiten crear aplicaciones con
@@ -36,7 +36,7 @@ Realiza una investigación en la que analices los siguientes aspectos.
 
 ------------------------------------------------------------------------
 
-## 1. ⚙️ Dalvik y ART en Android
+## 1. Dalvik y ART en Android
 
 Android utilizó originalmente **Dalvik** como máquina virtual y
 posteriormente adoptó **ART (Android Runtime)**.
@@ -53,7 +53,7 @@ tabla comparativa.
 
 ------------------------------------------------------------------------
 
-## 2. 🕐 Evolución de Android
+## 2. Evolución de Android
 
 Investiga en qué **versión de Android** se incorporaron o recibieron
 soporte las siguientes características:
@@ -74,7 +74,7 @@ temporal.
 
 ------------------------------------------------------------------------
 
-## 3. 🧩 Arquitectura del sistema operativo Android
+## 3. Arquitectura del sistema operativo Android
 
 Indica y describe las diferentes **capas que componen la arquitectura de
 Android**.
@@ -90,7 +90,7 @@ arquitectura de Android.
 
 ------------------------------------------------------------------------
 
-## 4. 🍎 Arquitectura del sistema operativo iOS
+## 4. Arquitectura del sistema operativo iOS
 
 Indica y describe las diferentes **capas que componen la arquitectura de
 iOS**.
@@ -106,21 +106,21 @@ arquitectura de iOS.
 
 ------------------------------------------------------------------------
 
-## 5. 💻 Lenguajes y entornos de desarrollo
+## 5. Lenguajes y entornos de desarrollo
 
 Investiga los **lenguajes y entornos de desarrollo más relevantes** para
 crear aplicaciones para Android e iOS.
 
 Como mínimo deberás identificar:
 
-### 🤖 Android
+### Android
 
 -   Lenguajes utilizados actualmente.
 -   Entorno de desarrollo principal.
 -   Herramientas o tecnologías relevantes para el desarrollo de
     interfaces.
 
-### 🍎 iOS
+### iOS
 
 -   Lenguajes utilizados actualmente.
 -   Entorno de desarrollo principal.
@@ -131,7 +131,7 @@ Organiza esta parte mediante una tabla comparativa.
 
 ------------------------------------------------------------------------
 
-## 6. 🔄 Comparación Android vs. iOS
+## 6. Comparación Android vs. iOS
 
 A partir de la información investigada, realiza una tabla comparativa
 que incluya, como mínimo:
@@ -150,7 +150,7 @@ Puedes añadir otros aspectos que consideres relevantes.
 
 ------------------------------------------------------------------------
 
-## 🤔 7. Conclusiones
+## 7. Conclusiones
 
 Finaliza el trabajo respondiendo razonadamente a estas cuestiones:
 
@@ -166,7 +166,7 @@ Finaliza el trabajo respondiendo razonadamente a estas cuestiones:
 
 ------------------------------------------------------------------------
 
-## 🌐 Fuentes de información
+## Fuentes de información
 
 Indica al final del documento las **fuentes concretas utilizadas**.
 
@@ -183,15 +183,15 @@ consultado**.
 
 ------------------------------------------------------------------------
 
-## 📤 Entrega
+## Entrega
 
 Entrega **un único documento en formato PDF**.
 
-### 📄 Nombre del archivo
+### Nombre del archivo
 
 `Practica2_NombreApellidos.pdf`
 
-### 📚 Estructura recomendada
+### Estructura recomendada
 
 1.  Portada.
 2.  Dalvik y ART.
@@ -211,7 +211,7 @@ propios** que ayuden a sintetizar y explicar la información.
 
 ------------------------------------------------------------------------
 
-## 📊 Rúbrica de evaluación — Práctica 2
+## Rúbrica de evaluación — Práctica 2
 
 **Resultado de aprendizaje:** RA1. Aplica tecnologías de desarrollo para dispositivos móviles evaluando sus características y capacidades.
 
@@ -271,7 +271,7 @@ Para cada indicador se seleccionará el nivel que mejor describa las evidencias 
 
 ------------------------------------------------------------------------
 
-## ⚠️ Requisitos para superar la práctica
+## Requisitos para superar la práctica
 
 No bastará con copiar definiciones independientes. El trabajo deberá
 demostrar que el alumno es capaz de **relacionar arquitectura, sistema

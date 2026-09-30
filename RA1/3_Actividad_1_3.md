@@ -1,176 +1,357 @@
-# Práctica 3. Android Studio, configuraciones y perfiles de dispositivos virtuales
+# Práctica 3. Android Studio: configuración y perfiles de dispositivos virtuales (AVD)
 
 **Módulo:** Programación Multimedia y Dispositivos Móviles  
 **Curso:** 2.º DAM  
-**Tipo:** Individual, con comprobación práctica en el aula  
-**Resultado de aprendizaje:** RA1. Aplica tecnologías de desarrollo para dispositivos móviles evaluando sus características y capacidades.
+**Modalidad:** Individual  
+**Calificación:** 10 puntos  
+**Resultado de aprendizaje:** **RA1.** Aplica tecnologías de desarrollo para dispositivos móviles evaluando sus características y capacidades.
+
+---
 
 ## 1. Criterios de evaluación
 
-Esta práctica recoge evidencias de los siguientes criterios de RA1:
+Esta práctica obtiene evidencias principalmente de los siguientes criterios de evaluación:
 
-- **c)** Instalación, configuración y utilización de entornos de trabajo para desarrollo móvil.
-- **d)** Identificación de configuraciones que clasifican dispositivos según sus características.
-- **e)** Descripción de perfiles que relacionan el dispositivo con los requisitos de una aplicación.
-- **h)** Utilización de emuladores para comprobar el funcionamiento de aplicaciones.
+- **RA1.d)** Se han identificado configuraciones que clasifican los dispositivos móviles en base a sus características.
+- **RA1.e)** Se han descrito perfiles que establecen la relación entre el dispositivo y la aplicación.
+- **RA1.h)** Se han utilizado emuladores para comprobar el funcionamiento de las aplicaciones.
 
-Los enunciados anteriores son resúmenes operativos de los criterios. La ejecución en emulador se profundizará en la práctica 4.
+La creación y configuración de los AVD permite trabajar especialmente los criterios **d** y **e**. La ejecución de una aplicación y las operaciones realizadas sobre el emulador aportan evidencia del criterio **h**.
 
-## 2. Objetivos
+---
 
-- Preparar Android Studio y las herramientas necesarias para trabajar.
-- Distinguir IDE, SDK, imagen de sistema, perfil de hardware y AVD.
-- Clasificar dispositivos utilizando características comprobables.
-- Relacionar una configuración de dispositivo con las necesidades de una app.
-- Crear y ejecutar un proyecto de prueba en dos configuraciones virtuales.
-- Registrar las pruebas y diagnosticar una incidencia real o un caso de incompatibilidad razonado.
+## 2. Objetivos de la práctica
 
-## 3. Situación de partida
+Al finalizar la práctica el alumno deberá ser capaz de:
 
-El departamento va a probar una aplicación de consulta de rutas en teléfonos y tabletas. Antes de desarrollar sus funcionalidades, debes preparar el entorno y justificar qué dispositivos virtuales utilizarías.
+- Identificar los principales tipos de dispositivos que puede simular Android Emulator.
+- Diferenciar **perfil de hardware**, **imagen del sistema** y **AVD**.
+- Crear dispositivos virtuales a partir de perfiles predefinidos.
+- Crear un **perfil de hardware personalizado** a partir de las características de un dispositivo real.
+- Seleccionar una imagen del sistema y relacionarla con su versión de Android y nivel de API.
+- Configurar orientación, memoria y almacenamiento de un AVD.
+- Ejecutar una aplicación Android en un dispositivo virtual.
+- Localizar la aplicación instalada mediante **Device Explorer**.
+- Restablecer los datos de un AVD mediante **Wipe Data**.
+- Documentar y justificar las configuraciones realizadas.
 
-Trabajarás con un proyecto sencillo llamado **RutasRA1**. En esta práctica solo se ejecutará la pantalla inicial que genera Android Studio; no se pide desarrollar todavía un planificador de rutas.
+---
 
-### Recursos
+## 3. Parte 1. Tipos de dispositivos que puede emular Android Studio — 1 punto
 
-- Ordenador con conexión a Internet y espacio suficiente para Android Studio, SDK e imágenes de sistema.
-- Permisos de instalación o un equipo del aula preparado por el centro.
-- Documentación oficial de Android.
+Accede a:
 
-Comprueba los requisitos actuales en la documentación, sin asumir que son iguales para ejecutar solo el IDE y para ejecutar también el emulador. Si el ordenador no permite emulación, acuerda con el profesor el uso de otro equipo del aula. Un informe teórico o una prueba solo en un teléfono físico no sustituye la evidencia del criterio h).
+**View → Tool Windows → Device Manager → + → Create Virtual Device**
 
-## 4. Instalación y configuración del entorno — RA1.c
+En la ventana **Select Hardware**, identifica los tipos de dispositivos que permite configurar tu versión de Android Studio.
 
-1. Comprueba el sistema operativo, la RAM, el espacio libre y la disponibilidad de aceleración o virtualización del equipo.
-2. Instala una versión estable de Android Studio desde su página oficial. Si está preinstalado, documenta su versión y completa una instalación o actualización de un componente del SDK supervisada por el profesor.
-3. Localiza el SDK Manager e identifica la ruta del SDK.
-4. Instala una plataforma Android, Platform Tools, Android Emulator y las imágenes necesarias para los AVD que configurarás.
-5. Comprueba el JDK utilizado por Gradle; utiliza la configuración compatible recomendada por el IDE. No cambies versiones de Java o Gradle al azar.
-6. Crea el proyecto **RutasRA1**, con paquete **com.tunombre.rutasra1**, lenguaje **Kotlin** y una plantilla de actividad vacía con **Views/XML**, normalmente denominada **Empty Views Activity**.
-7. Utiliza **minSdk 24** si las herramientas elegidas lo admiten; si el centro utiliza otro mínimo, registra el valor acordado. Mantén los valores de `compileSdk` y `targetSdk` compatibles con la plantilla y anótalos.
-8. Espera a la sincronización, compila y localiza el manifiesto, la actividad principal y su layout.
+Realiza una tabla como la siguiente:
 
-**Evidencias:** versión del IDE; componentes instalados; configuración del proyecto; compilación correcta. Añade una explicación breve de la diferencia entre `minSdk`, `compileSdk` y `targetSdk`.
+| Tipo de dispositivo | ¿Para qué se utiliza? | Ejemplo de perfil disponible en tu Android Studio |
+|---|---|---|
+| Phone/Tablet | | |
+| Wear OS | | |
+| Android TV / Google TV | | |
+| ChromeOS Device | | |
+| Android Automotive | | |
 
-**Pregunta:** ¿instalar una plataforma nueva en el SDK actualiza Android en un teléfono físico? Justifica la respuesta.
+> **Importante:** los perfiles disponibles pueden variar según la versión de Android Studio. Debes indicar ejemplos que aparezcan realmente en la instalación utilizada en el aula.
 
-## 5. Clasificación de configuraciones — RA1.d
+Incluye **una captura de Select Hardware** donde se observen las categorías disponibles.
 
-Antes de crear los AVD, compara **tres configuraciones**. Dos se implementarán como AVD y la tercera puede ser una configuración candidata que finalmente descartes.
+---
 
-| Característica | Configuración A | Configuración B | Configuración C |
-|---|---|---|---|
-| Tipo: teléfono, tableta u otro | | | |
-| Perfil/modelo utilizado como referencia | | | |
-| Tamaño de pantalla y resolución | | | |
-| Densidad y orientación | | | |
-| Memoria RAM configurada | | | |
-| Almacenamiento configurado | | | |
-| Versión de Android y nivel de API | | | |
-| Arquitectura de la imagen: x86_64, arm64 u otra | | | |
-| Sensores/capacidades disponibles o simulados | | | |
-| Tipo de imagen y servicios incluidos | | | |
-| Clasificación y uso que propones | | | |
+## 4. Parte 2. Creación de tres dispositivos virtuales — 6 puntos
 
-Explica qué características permiten clasificarlas y qué diferencias pueden afectar a una aplicación. No basta con copiar tres nombres comerciales.
+Debes configurar **tres AVD diferentes**.
 
-Distingue los datos del perfil virtual de las especificaciones de un dispositivo físico. No atribuyas al AVD el rendimiento real del modelo que representa.
+### 4.1. AVD 1 — Tablet Nexus 10 — 1,5 puntos
 
-## 6. Perfiles de aplicación y compatibilidad — RA1.e
+Crea un dispositivo virtual con estas condiciones:
 
-En esta actividad se emplea **perfil de uso de la aplicación** como una ficha de requisitos para relacionar app y dispositivo. No es lo mismo que el **perfil de hardware del AVD**, que describe el dispositivo virtual.
+- **Perfil de hardware:** Nexus 10.
+- **Sistema:** Android 15 **Vanilla Ice Cream**.
+- **API:** 35.
+- **Orientación inicial:** Landscape (horizontal).
 
-Elabora una ficha para cada caso:
+Si el perfil Nexus 10 no aparece directamente en tu versión de Android Studio, utiliza un perfil de tablet equivalente o crea/clona un perfil que reproduzca sus características e indica claramente qué solución has utilizado.
 
-- **Perfil A — Consulta de rutas:** muestra fichas de rutas, permite elegir manualmente origen y destino y debe poder usarse en teléfono y tableta. No necesita conocer la ubicación actual.
-- **Perfil B — Seguimiento de una ruta:** además de consultar información, necesita recibir la ubicación durante el uso y presentar el progreso. Debe informar cuando no obtiene ubicación o no dispone del permiso necesario.
+Completa la siguiente ficha:
 
-Para cada ficha:
+| Característica | Configuración realizada |
+|---|---|
+| Nombre del AVD | |
+| Perfil de hardware | |
+| Imagen del sistema / Android | |
+| Nivel de API | |
+| Arquitectura de la imagen | |
+| Tamaño de pantalla | |
+| Resolución | |
+| Densidad | |
+| Orientación inicial | |
+| Cámaras | |
+| Memoria RAM | |
+| Almacenamiento interno | |
+| Tarjeta SD / almacenamiento externo | |
 
-1. Distingue requisitos **obligatorios** y capacidades **opcionales**.
-2. Relaciónalos con la pantalla, versión/API, memoria, almacenamiento y capacidades del dispositivo. Cuando un requisito no tenga un mínimo numérico dado, formula una hipótesis de prueba y justifícala; no inventes un requisito oficial.
-3. Evalúa la compatibilidad con las tres configuraciones del apartado anterior.
-4. Indica si cada combinación es **compatible**, **compatible con condiciones** o **no compatible**, y explica por qué.
-5. Propón una alternativa cuando falte una capacidad y señala qué función se perdería.
+**Evidencias:** captura de la configuración final del AVD y captura del emulador iniciado en orientación horizontal.
 
-| Perfil de la app | Configuración | Resultado de compatibilidad | Justificación | Alternativa o prueba necesaria |
-|---|---|---|---|---|
-| A | A | | | |
-| A | B | | | |
-| A | C | | | |
-| B | A | | | |
-| B | B | | | |
-| B | C | | | |
+### 4.2. AVD 2 — Pixel 8 — 1,5 puntos
 
-Este apartado es un análisis de requisitos: **no tienes que programar ubicación ni solicitar permisos** en esta práctica. Tampoco debes presentar la hipótesis de compatibilidad como una funcionalidad ya comprobada.
+Crea un segundo AVD con estas condiciones:
 
-## 7. Creación y uso de AVD — RA1.c y RA1.h
+- **Perfil:** Pixel 8.
+- **Sistema:** Android 14.
+- **API:** 34.
+- **Orientación inicial:** Portrait (vertical).
 
-1. Crea dos AVD en Device Manager: **un teléfono y una tableta**.
-2. Utiliza **dos niveles de API distintos**, ambos iguales o superiores al `minSdk` del proyecto. Elige imágenes disponibles y compatibles con el ordenador del aula.
-3. Registra el perfil de hardware, la imagen de sistema y las propiedades de cada AVD. Distingue una imagen AOSP de una con Google APIs o Google Play, cuando esas opciones estén disponibles.
-4. Inicia cada emulador y comprueba que llega a la pantalla de inicio.
-5. Ejecuta **RutasRA1** en ambos, de uno en uno si los recursos del ordenador son limitados.
-6. En cada AVD, comprueba la apertura desde el lanzador, el cambio de orientación y la salida a Inicio con posterior retorno a la app.
-7. Localiza el proceso de la app en Logcat e identifica el emulador al que está conectado el IDE.
+Completa la misma ficha de características utilizada para el AVD anterior.
 
-Registra el resultado real: no es suficiente que el AVD aparezca en la lista de dispositivos.
+**Evidencias:** captura de la configuración final y captura del Pixel 8 ejecutándose en orientación vertical.
 
-| Prueba | AVD/API | Pasos | Resultado esperado | Resultado observado | Evidencia |
-|---|---|---|---|---|---|
-| Instalación y primera ejecución | | | | | |
-| Apertura desde el lanzador | | | | | |
-| Cambio de orientación | | | | | |
-| Inicio y retorno | | | | | |
+### 4.3. AVD 3 — Perfil personalizado basado en OnePlus 12 — 3 puntos
 
-Repite las cuatro pruebas en cada AVD.
+Android Studio no proporciona necesariamente un perfil predefinido para el OnePlus 12. Por ello, debes **investigar sus especificaciones y crear un perfil de hardware personalizado**.
 
-## 8. Diagnóstico y conclusiones
+Ruta orientativa:
 
-Describe una incidencia real indicando síntoma, comprobaciones, causa probable, actuación y resultado. Si no se produce ninguna, analiza este caso sin necesidad de instalar otra imagen:
+**Device Manager → + → Create Virtual Device → New Hardware Profile**
 
-> El proyecto tiene `minSdk 28` y se intenta ejecutar en un AVD con API 26.
+Investiga las especificaciones del **OnePlus 12** utilizando preferentemente la web oficial del fabricante.
 
-Explica la incompatibilidad y propón alternativas razonadas. No reduzcas `minSdk` sin comprobar si el código y las dependencias admiten ese cambio.
+Como referencia, el modelo comercial dispone, según versión, de características como:
 
-Concluye respondiendo:
+- Pantalla: **6,82 pulgadas**.
+- Resolución: **3168 × 1440 píxeles (QHD+)**.
+- Densidad aproximada: **510 ppp**.
+- Sistema de lanzamiento: **OxygenOS 14 basado en Android 14**.
+- RAM comercial: **12 GB o 16 GB**.
+- Almacenamiento comercial: **256 GB o 512 GB**.
+- Cámara frontal y cámaras traseras.
 
-- ¿Por qué elegiste esas dos configuraciones?
-- ¿Qué diferencia hay entre un perfil de hardware y un perfil de requisitos de la app?
-- ¿Qué has comprobado realmente y qué requeriría una app completa o un dispositivo físico?
+Debes distinguir entre las **especificaciones del teléfono físico** y lo que Android Emulator permite reproducir. No se pretende simular exactamente su procesador Snapdragon, GPU, rendimiento fotográfico, batería o velocidad real del dispositivo.
 
-## 9. Entrega
+#### Trabajo que debes realizar
 
-Entrega:
+1. Busca las especificaciones del OnePlus 12.
+2. Cita la fuente utilizada.
+3. Crea un nuevo perfil llamado, por ejemplo, **OnePlus 12 - Alumno**.
+4. Introduce las características que puedan trasladarse razonablemente al perfil de hardware.
+5. Crea un AVD utilizando ese perfil y una imagen **Android 14 / API 34**.
+6. Inicia el emulador y comprueba que funciona.
 
-1. **`Practica3_NombreApellidos.pdf`**, con 5–8 páginas orientativas: entorno, comparación de configuraciones, perfiles de aplicación, AVD, pruebas, diagnóstico y fuentes.
-2. **`Practica3_NombreApellidos.zip`**, con el proyecto RutasRA1.
+Completa dos tablas.
 
-Incluye en el proyecto los archivos fuente, recursos, manifiesto, scripts de construcción y Gradle Wrapper. Excluye `local.properties`, carpetas `build/`, `.gradle/`, imágenes del emulador, SDK y credenciales. No entregues los AVD completos: documenta su configuración en el informe.
+**A. Investigación del dispositivo real**
 
-Las capturas deben mostrar las evidencias necesarias y llevar una explicación. El profesor podrá solicitar una demostración de ejecución y que localices la configuración del proyecto.
+| Característica | OnePlus 12 real | Fuente |
+|---|---|---|
+| Tamaño de pantalla | | |
+| Resolución | | |
+| Densidad | | |
+| RAM | | |
+| Almacenamiento | | |
+| Versión Android de referencia | | |
+| Cámara frontal | | |
+| Cámaras traseras | | |
 
-## 10. Rúbrica de evaluación
+**B. Perfil creado en Android Studio**
 
-| Indicador | Criterio | Excelente — 100 % | Adecuado — 75 % | Básico — 50 % | Insuficiente — 0 % | Máximo |
+| Característica | Valor configurado en el AVD |
+|---|---|
+| Nombre | |
+| Imagen del sistema / API | |
+| Tamaño | |
+| Resolución | |
+| Densidad | |
+| Orientación inicial | |
+| Cámaras | |
+| Memoria RAM | |
+| Almacenamiento interno | |
+| Tarjeta SD / almacenamiento externo | |
+
+Finalmente responde:
+
+**¿Qué características del OnePlus 12 real no pueden reproducirse fielmente mediante un AVD? Explica al menos tres.**
+
+**Evidencias:** captura de **Configure Hardware Profile**, captura de la configuración final del AVD y captura del emulador en funcionamiento.
+
+---
+
+## 5. Parte 3. Uso del emulador — 2 puntos
+
+Utiliza el **AVD Nexus 10** creado anteriormente.
+
+### 5.1. Ejecutar una aplicación — 0,75 puntos
+
+a) Abre un proyecto Android sencillo realizado en clase o crea uno de prueba.  
+b) Selecciona el AVD Nexus 10 como dispositivo de ejecución.  
+c) Ejecuta la aplicación.  
+d) Comprueba que aparece correctamente en el emulador.  
+e) Incluye una captura donde se vea la aplicación ejecutándose.
+
+### 5.2. Localizar la aplicación instalada — 0,75 puntos
+
+Utiliza **Device Explorer** para localizar los archivos asociados a la aplicación instalada.
+
+Indica:
+
+a) El **package name** de la aplicación.  
+b) La ruta que has localizado.  
+c) Qué contiene esa ubicación.  
+d) Si puedes acceder o no a todos los directorios y por qué.  
+e) Incluye una captura del explorador donde se identifique la aplicación.
+
+> No es suficiente escribir una ruta obtenida de Internet: debe corresponder al proyecto que has ejecutado.
+
+### 5.3. Restablecer el AVD — 0,5 puntos
+
+a) Cierra el emulador.  
+b) Abre **Device Manager**.  
+c) En el menú del AVD Nexus 10 utiliza **Wipe Data**.  
+d) Vuelve a iniciar el AVD.  
+e) Comprueba que los datos y aplicaciones instaladas por el usuario han sido eliminados.  
+f) Incluye una captura antes o después del proceso y explica brevemente qué hace **Wipe Data**.
+
+---
+
+## 6. Preguntas de reflexión
+
+Responde brevemente:
+
+a) ¿Qué diferencia existe entre un **perfil de hardware** y un **AVD**?  
+b) ¿Qué diferencia existe entre el perfil Pixel 8 y la imagen Android 14/API 34 que has utilizado?  
+c) ¿Por qué dos AVD pueden utilizar el mismo perfil de hardware pero diferentes versiones de Android?  
+d) ¿Un AVD reproduce exactamente el rendimiento de un teléfono físico? Justifica la respuesta.  
+e) ¿Para qué puede ser útil probar una misma aplicación en una tablet y en un smartphone?  
+f) ¿Qué relación existe entre las características de un dispositivo y los requisitos de una aplicación?
+
+---
+
+## 7. Qué debe entregar el alumno
+
+La entrega constará de **un único informe en PDF**:
+
+**`Practica3_AVD_Apellidos_Nombre.pdf`**
+
+El informe deberá seguir el orden de los ejercicios anteriores. Cada apartado de la entrega debe permitir identificar claramente a qué ejercicio corresponde.
+
+### 7.1. Portada e índice
+
+a) Portada con título de la práctica, nombre y apellidos, curso, módulo y fecha.  
+b) Índice del documento.
+
+### 7.2. Correspondencia con el ejercicio 3 — Tipos de dispositivos
+
+a) Tabla de tipos de dispositivos que permite configurar Android Studio.  
+b) Explicación breve de para qué se utiliza cada tipo.  
+c) Ejemplo de un perfil disponible para cada tipo.  
+d) Captura de **Select Hardware** donde se observen las categorías disponibles.
+
+### 7.3. Correspondencia con el ejercicio 4.1 — AVD Nexus 10
+
+a) Tabla completa con las características configuradas.  
+b) Captura de la configuración final del AVD.  
+c) Captura del emulador iniciado con orientación horizontal.  
+d) Explicación de cualquier adaptación realizada si Nexus 10 no aparece como perfil predefinido.
+
+### 7.4. Correspondencia con el ejercicio 4.2 — AVD Pixel 8
+
+a) Tabla completa con las características configuradas.  
+b) Captura de la configuración final del AVD.  
+c) Captura del emulador Pixel 8 ejecutándose con orientación vertical.
+
+### 7.5. Correspondencia con el ejercicio 4.3 — Perfil personalizado OnePlus 12
+
+a) Tabla de investigación del dispositivo real.  
+b) Fuente o fuentes utilizadas para obtener las especificaciones.  
+c) Tabla del perfil creado en Android Studio.  
+d) Captura de **Configure Hardware Profile**.  
+e) Captura de la configuración final del AVD.  
+f) Captura del emulador en funcionamiento.  
+g) Respuesta sobre, al menos, tres características del OnePlus 12 real que no puedan reproducirse fielmente mediante el AVD.
+
+### 7.6. Correspondencia con el ejercicio 5.1 — Ejecución de la aplicación
+
+a) Captura de la aplicación ejecutándose en el AVD Nexus 10.  
+b) Breve explicación del proyecto utilizado y del resultado obtenido.
+
+### 7.7. Correspondencia con el ejercicio 5.2 — Device Explorer
+
+a) **Package name** de la aplicación.  
+b) Ruta localizada mediante **Device Explorer**.  
+c) Explicación de qué contiene esa ubicación.  
+d) Explicación sobre el acceso a los directorios.  
+e) Captura de Device Explorer donde pueda identificarse la aplicación.
+
+### 7.8. Correspondencia con el ejercicio 5.3 — Wipe Data
+
+a) Evidencia del proceso de restablecimiento del AVD.  
+b) Explicación breve de qué hace **Wipe Data**.  
+c) Comprobación de que los datos y aplicaciones instalados por el usuario han sido eliminados.
+
+### 7.9. Correspondencia con el ejercicio 6 — Preguntas de reflexión
+
+a) Respuesta a la pregunta 6.a.  
+b) Respuesta a la pregunta 6.b.  
+c) Respuesta a la pregunta 6.c.  
+d) Respuesta a la pregunta 6.d.  
+e) Respuesta a la pregunta 6.e.  
+f) Respuesta a la pregunta 6.f.
+
+### 7.10. Conclusiones y webgrafía
+
+a) Conclusión de entre **5 y 10 líneas** sobre lo aprendido durante la práctica.  
+b) Webgrafía con las páginas consultadas, URL y fecha de consulta.
+
+### Requisitos de las capturas
+
+a) Deben ser **capturas propias**.  
+b) Deben ser legibles.  
+c) Cada captura debe llevar un pequeño texto indicando qué demuestra.  
+d) Deben permitir identificar claramente la configuración o acción realizada.  
+e) No es necesario entregar las carpetas de los AVD ni las imágenes del sistema.
+
+---
+
+## 8. Rúbrica de evaluación
+
+| Indicador evaluado | Criterio | Excelente | Adecuado | Básico | Insuficiente | Máximo |
 |---|---|---|---|---|---|---:|
-| Instalación, configuración y uso del entorno | c | Acredita instalación o intervención supervisada, configura SDK/proyecto y compila; explica la función de los componentes y las versiones. | Entorno operativo y evidencias suficientes, con alguna explicación incompleta. | Configuración parcialmente acreditada o uso con ayuda frecuente; distingue solo parte de los componentes. | No acredita un entorno utilizable ni su configuración. | 3 |
-| Clasificación de dispositivos | d | Compara tres configuraciones con datos verificables y explica su clasificación y consecuencias para las apps. | Compara las tres con alguna omisión menor y una clasificación razonada. | Comparación parcial o clasificación poco justificada. | Solo enumera modelos o presenta datos esenciales incorrectos. | 2 |
-| Perfiles y relación dispositivo–aplicación | e | Define los dos perfiles, distingue requisitos y opcionales y justifica las seis combinaciones de compatibilidad y alternativas. | Describe los dos perfiles y la mayoría de las relaciones correctamente. | Confunde algunos requisitos o ofrece relaciones genéricas sin suficiente justificación. | No relaciona requisitos de la aplicación y capacidades de los dispositivos. | 2 |
-| Comprobación de la app en emuladores | h | Ejecuta la app en ambos AVD y documenta las ocho pruebas con resultados reales y evidencias identificables. | Ejecuta en ambos y acredita la mayoría de las pruebas, con omisiones menores. | Solo acredita ejecución y pruebas parciales en un AVD. | No demuestra ejecución de la aplicación en un emulador. | 3 |
-| **TOTAL** | | | | | | **10** |
+| Identificación de tipos de dispositivos | RA1.d | Identifica correctamente las categorías disponibles, explica su finalidad y aporta ejemplos reales de perfiles. | Identifica las categorías principales y aporta ejemplos con alguna omisión menor. | Identificación parcial o explicaciones muy breves. | No distingue los tipos de dispositivos o aporta información incorrecta. | **1,0** |
+| Nexus 10 / Android 15 API 35 | RA1.d | Configuración completa, correcta y documentada; orientación horizontal y evidencias claras. | Configuración correcta con alguna omisión menor en datos o evidencias. | AVD creado pero con errores de configuración o documentación incompleta. | No crea o no acredita el AVD solicitado. | **1,5** |
+| Pixel 8 / Android 14 API 34 | RA1.d | Configuración completa, correcta y documentada; orientación vertical y evidencias claras. | Configuración correcta con alguna omisión menor. | AVD creado pero con errores o documentación incompleta. | No crea o no acredita el AVD solicitado. | **1,5** |
+| Perfil personalizado OnePlus 12 | RA1.d / RA1.e | Investiga fuentes fiables, crea un perfil coherente, diferencia dispositivo real y virtual y justifica limitaciones. | Perfil correctamente creado y documentado, con pequeñas omisiones. | Perfil parcialmente ajustado al modelo real o investigación/justificación insuficiente. | No crea el perfil personalizado o los datos carecen de fundamento. | **3,0** |
+| Ejecución de la aplicación | RA1.h | Ejecuta correctamente la app en el AVD y aporta evidencia clara. | Ejecución correcta con evidencia poco explicada. | Evidencia incompleta o necesita ayuda importante. | No demuestra la ejecución. | **0,75** |
+| Device Explorer y localización | RA1.h | Localiza la app, identifica package name y ruta y explica correctamente lo observado. | Localiza la aplicación con alguna explicación incompleta. | Presenta evidencia parcial o confunde ruta/package. | No localiza la aplicación. | **0,75** |
+| Wipe Data | RA1.h | Realiza el restablecimiento y explica correctamente su efecto con evidencia. | Realiza el proceso con explicación breve. | Evidencia incompleta o explicación confusa. | No realiza o no acredita el proceso. | **0,5** |
+| Presentación, reflexión y webgrafía | RA1.e | Informe completo, ordenado, con portada, índice, conclusiones, respuestas razonadas y fuentes correctamente identificadas. | Informe completo con pequeñas carencias formales. | Faltan varios elementos o las respuestas son poco razonadas. | Entrega desorganizada, sin fuentes o con apartados esenciales ausentes. | **1,0** |
+| **TOTAL** | | | | | | **10,0** |
 
-**Cálculo:** peso máximo × coeficiente del nivel (1; 0,75; 0,50; 0). Suma las puntuaciones y redondea la nota final a dos decimales.
+### Cálculo de la rúbrica
 
-Las capturas, explicaciones y demostraciones son evidencias de cada indicador, no criterios independientes. Se valorará el diagnóstico razonado; una incidencia del equipo documentada no debe confundirse con desconocimiento, pero exige una comprobación posterior para acreditar la ejecución.
+Para cada indicador se aplicará:
 
-## 11. Fuentes
+- **Excelente:** 100 % de la puntuación.
+- **Adecuado:** 75 %.
+- **Básico:** 50 %.
+- **Insuficiente:** 0 %.
 
-Consulta páginas concretas y registra la fecha de consulta:
+La nota final será la suma de las puntuaciones obtenidas en todos los indicadores.
 
-- [Instalar Android Studio](https://developer.android.com/studio/install).
-- [Crear y gestionar AVD](https://developer.android.com/studio/run/managing-avds).
-- [Ejecutar apps en Android Emulator](https://developer.android.com/studio/run/emulator).
-- [Configurar la construcción de una app](https://developer.android.com/build).
-- [Referencia estatal de RA1: Real Decreto 405/2023](https://www.boe.es/eli/es/rd/2023/05/29/405).
+---
 
+## 9. Fuentes recomendadas
+
+Utiliza preferentemente documentación oficial:
+
+- Android Developers — Crear y administrar dispositivos virtuales:  
+  https://developer.android.com/studio/run/managing-avds
+- Android Developers — Android Emulator:  
+  https://developer.android.com/studio/run/emulator
+- Android Developers — Versiones y niveles de API de Android:  
+  https://developer.android.com/guide/topics/manifest/uses-sdk-element
+- OnePlus — Especificaciones oficiales del OnePlus 12:  
+  https://www.oneplus.com/es/12/specs
+
+> Las interfaces y perfiles disponibles pueden cambiar entre versiones de Android Studio. Si alguna opción indicada en el enunciado no aparece exactamente con ese nombre, documenta la alternativa utilizada y justifica la decisión.

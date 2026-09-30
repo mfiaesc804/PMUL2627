@@ -174,10 +174,3 @@ Consulta páginas concretas y registra la fecha de consulta:
 - [Configurar la construcción de una app](https://developer.android.com/build).
 - [Referencia estatal de RA1: Real Decreto 405/2023](https://www.boe.es/eli/es/rd/2023/05/29/405).
 
-## 12. Orientaciones para el profesor
-
-- Preparar las descargas e imágenes compatibles con los equipos antes de la sesión.
-- Comprobar que el alumno interviene en la configuración aunque el IDE esté preinstalado.
-- La elección de Views/XML facilita observar archivos y actividades en la práctica siguiente; no implica que Compose no sea una opción actual.
-- Los perfiles de requisitos constituyen una concreción didáctica del criterio e), sin presentar los perfiles de AVD como equivalentes automáticos a perfiles de aplicación ni a los antiguos perfiles de Java ME.
-- Registrar c), d), e) y h) por separado. Los pesos son una propuesta de actividad; la ponderación global de RA1 corresponde a la programación docente.

@@ -81,7 +81,7 @@ Una **variable** es un espacio en memoria que guarda un dato (un número, un tex
 Es como una constante: una vez que le das un valor, no puedes cambiarlo.
 
 ```kotlin
-val nombreCentro = "IES Sierra Norte"
+val nombreCentro = "IES Mi Centro"
 println("Centro educativo: $nombreCentro")
 ```
 

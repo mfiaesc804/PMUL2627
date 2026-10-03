@@ -1,62 +1,128 @@
-# UD1 — Introducción a Kotlin
+# Introducción a Kotlin
 
 <img src="../../../assets/images/ud01/kotlin_logo_black.png" alt="Logo Kotlin" style="zoom: 30%;" />
 
-## Objetivos de la Unidad
+## Introducción
+
+Esta unidad presenta los fundamentos de Kotlin mediante explicaciones y ejemplos prácticos, tomando como referencia los conocimientos previos de Java. El recorrido comienza con la organización y ejecución de proyectos y continúa con variables, entrada y salida, estructuras de control y colecciones. Después se trabajan las funciones, las lambdas y la programación orientada a objetos, para terminar con la gestión de excepciones y la organización del código en paquetes.
+
+## Objetivos de la unidad
 
 | # | Objetivo |
 | :---: | :--- |
-| 2 | Comprender las diferencias clave entre Kotlin y Java y sus ventajas |
-| 3 | Declarar y utilizar variables, tipos de datos y estructuras de control en Kotlin |
-| 4 | Definir y usar funciones, clases y colecciones propias de Kotlin |
-| 5 | Aplicar los principios de la POO (herencia, interfaces, data classes) en Kotlin |
+| 1 | Organizar, ejecutar y compartir un proyecto de Kotlin. |
+| 2 | Declarar y utilizar variables, tipos de datos y estructuras de control. |
+| 3 | Trabajar con arrays, listas, conjuntos y mapas. |
+| 4 | Definir y utilizar funciones, lambdas y funciones de orden superior. |
+| 5 | Utilizar clases, propiedades, constructores, herencia y clases de datos. |
+| 6 | Gestionar excepciones y organizar el código mediante paquetes e importaciones. |
+
+## Índice
+
+- [1. Proyectos](#apartado-1)
+  - [1.1. Ejecución de la aplicación](#apartado-1-1)
+  - [1.2. Estructura de carpetas](#apartado-1-2)
+  - [1.3. Compartir proyectos](#apartado-1-3)
+- [2. Variables](#apartado-2)
+  - [2.1. val – Inmutable (no se puede cambiar)](#apartado-2-1)
+  - [2.2. var – Mutable (se puede cambiar)](#apartado-2-2)
+  - [2.3. Tipos de datos](#apartado-2-3)
+  - [2.4. Operadores aritméticos](#apartado-2-4)
+  - [2.5. Valores nulos y seguridad frente a null](#apartado-2-5)
+- [3. Entrada y salida estándar](#apartado-3)
+- [4. Condicionales](#apartado-4)
+- [5. Repeticiones](#apartado-5)
+  - [5.1. while](#apartado-5-1)
+  - [5.2. do-while](#apartado-5-2)
+  - [5.3. for](#apartado-5-3)
+  - [5.4. repeat](#apartado-5-4)
+- [6. Estructuras de datos](#apartado-6)
+  - [6.1. Array](#apartado-6-1)
+  - [6.2. List (lista)](#apartado-6-2)
+  - [6.3. Set (conjunto)](#apartado-6-3)
+  - [6.4. Map (diccionario o mapa)](#apartado-6-4)
+- [7. Funciones](#apartado-7)
+  - [7.1. Funciones locales](#apartado-7-1)
+  - [7.2. Funciones con cantidad variable de argumentos](#apartado-7-2)
+- [8. Funciones lambda](#apartado-8)
+- [9. Funciones de orden superior](#apartado-9)
+- [10. Programación orientada a objetos (POO)](#apartado-10)
+  - [10.1. Constructor primario](#apartado-10-1)
+  - [10.2. Propiedades dentro del cuerpo](#apartado-10-2)
+  - [10.3. constructor secundario](#apartado-10-3)
+  - [10.4. Constructor primario + secundario](#apartado-10-4)
+  - [10.5. getters y setters](#apartado-10-5)
+  - [10.6. Relación entre clases](#apartado-10-6)
+  - [10.7. Acceso a métodos y propiedades](#apartado-10-7)
+  - [10.8. Herencia](#apartado-10-8)
+  - [10.9. Arrays y ArrayLists de objetos](#apartado-10-9)
+  - [10.10. Funciones de extensión](#apartado-10-10)
+  - [10.11. data class](#apartado-10-11)
+  - [10.12. Sobrecarga de operadores](#apartado-10-12)
+- [11. Excepciones](#apartado-11)
+- [12. Package e import](#apartado-12)
 
 ---
 
-## Proyectos
-### 3.2. Ejecución de la aplicación
+<a id="apartado-1"></a>
+
+## 1. Proyectos
+<a id="apartado-1-1"></a>
+
+### 1.1. Ejecución de la aplicación
 
 Para ejecutarla hay que hacer clic en el icono **Play**. El proyecto debe tener, al menos, un método `main`, Kotlin utiliza la palabra reservada `fun` para declararlo. El resultado de la ejecución aparecerá por consola (en la parte inferior de la pantalla).
 
 <img src="../../../assets/images/ud01/ud01_11.png" alt="Nuevo proyecto" style="zoom: 50%;" />
 
-### 3.3. Estructura de carpetas
+<a id="apartado-1-2"></a>
+
+### 1.2. Estructura de carpetas
 
 Como vimos en Java, al crear un nuevo proyecto se crea una estructura de carpetas y los archivos fuentes deben estar en la carpeta **src**. En este caso, Kotlin funciona exactamente igual. Para crear una nueva clase o archivo hay que hacer clic con el botón derecho del ratón sobre carpeta **src**, luego hacer clic en **New**, luego clic en **Kotlin File/Class** y por último indicar el nombre.
 
 <img src="../../../assets/images/ud01/ud01_12.png" alt="Nuevo proyecto" style="zoom: 50%;" />
 
-### 3.4. Compartir proyectos
+<a id="apartado-1-3"></a>
+
+### 1.3. Compartir proyectos
 
 Por último vamos a recordar cómo compartir proyectos (para entregar en una tarea de clase, para hacer copia de seguridad, etc). Se realiza desde fuera de IntelliJ utilizando el explorador de archivos del sistema operativo. Para ello hay que localizar la carpeta correspondiente al proyecto y comprimirla.
 
 <img src="../../../assets/images/ud01/ud01_13.png" alt="Nuevo proyecto" style="zoom: 50%;" />
 
+<a id="apartado-2"></a>
 
-## 4. Variables
+## 2. Variables
 
 Una **variable** es un espacio en memoria que guarda un dato (un número, un texto, etc). En Kotlin existen dos formas principales de declarar variables:
 
-### 4.1. val – Inmutable (no se puede cambiar)
+<a id="apartado-2-1"></a>
+
+### 2.1. val – Inmutable (no se puede cambiar)
 
 Es como una constante: una vez que le das un valor, no puedes cambiarlo.
 
 ```kotlin
-val pi = 3.1416
-println ("El valor de PI es $pi")
+val nombreCentro = "IES Sierra Norte"
+println("Centro educativo: $nombreCentro")
 ```
 
-### 4.2. var – Mutable (se puede cambiar)
+<a id="apartado-2-2"></a>
+
+### 2.2. var – Mutable (se puede cambiar)
 
 Es una variable normal: puedes cambiar su valor más adelante.
 
 ```kotlin
-var contador = 0
-contador += 1
-println ("Contador: $contador")  // Salida: Contador: 1
+var puntos = 20
+puntos += 5
+println("Puntuación: $puntos")  // Salida: Puntuación: 25
 ```
 
-### 4.3. Tipos de datos
+<a id="apartado-2-3"></a>
+
+### 2.3. Tipos de datos
 
 En Kotlin no es necesario declarar el tipo de una variable (aunque puede hacerse). A continuación se detallan los tipos más comunes:
 
@@ -72,6 +138,10 @@ En Kotlin no es necesario declarar el tipo de una variable (aunque puede hacerse
 | String | Texto (También se puede acceder a los caracteres individualmente) | `val saludo: String = "Hola Mundo"`<br>`val letra = saludo[0]  // 'H'` |
 | Boolean | Verdadero o falso | `val esMayor = true` |
 
+<a id="apartado-2-4"></a>
+
+### 2.4. Operadores aritméticos
+
 A continuación se muestran los operadores aritméticos:
 
 | Operador | Nombre | Ejemplo | Resultado |
@@ -86,7 +156,11 @@ En Kotlin, una división entre enteros da como resultado un número entero: `val
 
 Para obtener decimales, al menos uno debe ser tipo Double o Float: `val resultado = 7.0 / 2` // Resultado: 3.5
 
-En Kotlin, Por defecto, las variables no pueden ser nulas, el siguiente código daría un error de compilación ya que nombre no puede ser null:
+<a id="apartado-2-5"></a>
+
+### 2.5. Valores nulos y seguridad frente a null
+
+En Kotlin, por defecto, las variables no pueden ser nulas, el siguiente código daría un error de compilación ya que nombre no puede ser null:
 
 ```kotlin
 var nombre: String = "Pol"
@@ -145,7 +219,9 @@ if (nombre != null) {
 }
 ```
 
-## 5. Entrada y salida estándar
+<a id="apartado-3"></a>
+
+## 3. Entrada y salida estándar
 
 Cuando queremos mostrar información al usuario o pedirle información utilizamos la consola. Las funciones más comunes para comunicarnos con él son:
 
@@ -170,7 +246,9 @@ fun main() {
 }
 ```
 
-## 6. Condicionales
+<a id="apartado-4"></a>
+
+## 4. Condicionales
 
 Las condiciones en Kotlin se tratan de manera muy parecida a Java y para ello se utilizan los operadores relacionales.
 
@@ -194,20 +272,20 @@ Estos operadores pueden combinarse con los operadores lógicos siguientes:
 **Ejemplo 1 - condicional simple:**
 
 ```kotlin
-val edad = 18
-if (edad >= 18) {
-    println ("Eres mayor de edad")
+val temperatura = 31
+if (temperatura >= 30) {
+    println("Recuerda beber agua")
 }
 ```
 
 **Ejemplo 2 - if-else:**
 
 ```kotlin
-val numero = 5
-if (numero % 2 == 0) {
-    println ("Es par")
+val unidades = 12
+if (unidades % 3 == 0) {
+    println("Se pueden preparar paquetes de tres")
 } else {
-    println ("Es impar")
+    println("Quedarán unidades sueltas")
 }
 ```
 
@@ -239,31 +317,37 @@ val max = if (a > b) a else b
 **Ejemplo 5 - when (como switch):**
 
 ```kotlin
-val dia = 3
-val nombreDia = when (dia) {
-   1 -> "Lunes"
-   2 -> "Martes"
-   3 -> "Miércoles"
-   else -> "Día inválido"
+val opcion = 2
+val accion = when (opcion) {
+    1 -> "Crear una tarea"
+    2 -> "Consultar las tareas"
+    3 -> "Salir"
+    else -> "Opción no válida"
 }
+println(accion)  // Salida: Consultar las tareas
 ```
 
 **Ejemplo 6 - when con condiciones:**
 
 ```kotlin
-val nota = 85
-val resultado = when {
-   nota >= 90 -> "Excelente"
-   nota >= 70 -> "Aprobado"
-   else -> "Reprobado"
+val importe = 75
+val gastosEnvio = when {
+    importe >= 60 -> 0
+    importe >= 30 -> 3
+    else -> 6
 }
+println("Gastos de envío: $gastosEnvio €")  // Salida: Gastos de envío: 0 €
 ```
 
-## 7. Repeticiones
+<a id="apartado-5"></a>
+
+## 5. Repeticiones
 
 A continuación se ven las estructuras repetitivas `while`, `do-while`, `for` y `repeat`.
 
-### 7.1. while
+<a id="apartado-5-1"></a>
+
+### 5.1. while
 
 Repite mientras la condición sea verdadera.
 Se evalúa la condición **antes** de entrar al ciclo. Si la condición es falsa desde el principio, el bloque **no se ejecuta**.
@@ -276,7 +360,9 @@ while (contador <= 5) {
 }
 ```
 
-### 7.2. do-while
+<a id="apartado-5-2"></a>
+
+### 5.2. do-while
 
 Hace la acción al menos una vez, luego verifica la condición.
 Se ejecuta **primero el bloque de código**, y **luego** se evalúa la condición.
@@ -289,7 +375,9 @@ do {
 } while (contador <= 5)
 ```
 
-### 7.3. for
+<a id="apartado-5-3"></a>
+
+### 5.3. for
 
 Recorre un rango, lista o secuencia.
 Se usa cuando **sabemos cuántas veces** queremos repetir algo.
@@ -300,7 +388,9 @@ for (i in 1..5) {
 }
 ```
 
-### 7.4. repeat
+<a id="apartado-5-4"></a>
+
+### 5.4. repeat
 
 Repite una acción N veces (sin necesidad de un rango ni una colección).
 
@@ -317,11 +407,15 @@ repeat(3) {
 | `for` | Cuando **sabemos cuántas veces** o queremos recorrer algo. | Sí | Sí |
 | `repeat` | Cuando queremos repetir algo un número fijo de veces. | - | - |
 
-## 8. Estructuras de datos
+<a id="apartado-6"></a>
+
+## 6. Estructuras de datos
 
 Las estructuras de datos son formas de organizar, almacenar y manipular información de manera eficiente. Las principales estructuras de datos en Kotlin son:
 
-### 8.1. Array
+<a id="apartado-6-1"></a>
+
+### 6.1. Array
 
 Colección ordenada de tamaño fijo. Todos sus elementos son del mismo tipo. A cada elemento se accede mediante un índice. Se utiliza cuando se tiene un número fijo de elementos del mismo tipo.
 
@@ -388,7 +482,9 @@ for (i in 0..numeros.size - 1) {
 }
 ```
 
-### 8.2. List (lista)
+<a id="apartado-6-2"></a>
+
+### 6.2. List (lista)
 
 Colección ordenada que permite elementos duplicados. Puede ser inmutable (`List`) o mutable (`MutableList`). Se utiliza cuando se quiere mantener un orden y permitir elementos repetidos.
 
@@ -405,7 +501,9 @@ nombresMutable.removeAt(0)  // Eliminar por índice
 nombresMutable.clear()      // Eliminar todos los elementos
 ```
 
-### 8.3. Set (conjunto)
+<a id="apartado-6-3"></a>
+
+### 6.3. Set (conjunto)
 
 Colección sin duplicados, sin orden garantizado. Puede ser inmutable (`Set`) o mutable (`MutableSet`). Se utiliza cuando no se quieren duplicados y el orden no importa.
 
@@ -429,7 +527,9 @@ for (fruta in frutas) {
 }
 ```
 
-### 8.4. Map (diccionario o mapa)
+<a id="apartado-6-4"></a>
+
+### 6.4. Map (diccionario o mapa)
 
 Colección de pares clave → valor. Cada clave es única; útil para representar relaciones. Puede ser inmutable (`Map`) o mutable (`MutableMap`). Se utiliza cuando se quiere asociar claves con valores.
 
@@ -451,7 +551,9 @@ println("Eli:" + datos["Eli"])
 | `Set` | No | Sí | No | si es mutable |
 | `Map` | No | Sí (en claves) | en valores | si es mutable |
 
-## 9. Funciones
+<a id="apartado-7"></a>
+
+## 7. Funciones
 
 Son bloques de código que realizan tareas específicas (métodos en Java) y sirven para organizar, reutilizar y evitar repetir el mismo código varias veces.
 
@@ -485,8 +587,9 @@ var suma = sumar(2, 3)
 - **Ejemplo de función con forma simplificada:**
 
 ```kotlin
-fun multiplicar(a: Int, b: Int) = a * b
-var multi = multiplicar(3,5)
+fun calcularArea(base: Int, altura: Int) = base * altura
+val area = calcularArea(6, 4)
+println("Área: $area")  // Salida: Área: 24
 ```
 
 - **Ejemplo de función con parámetro con valor por defecto:**
@@ -549,7 +652,9 @@ println("Original: ${nombres.joinToString()}")
 println("Con signo: ${nombresConSigno.joinToString()}")
 ```
 
-### 9.1. Funciones locales
+<a id="apartado-7-1"></a>
+
+### 7.1. Funciones locales
 
 Una **función local** es una función que se define **dentro de otra función**. Solo puede ser usada dentro de esa función de forma interna.
 
@@ -564,7 +669,9 @@ fun procesarTexto(texto: String) {
 procesarTexto("   Hola Mundo   ")
 ```
 
-### 9.2. Funciones con cantidad variable de argumentos
+<a id="apartado-7-2"></a>
+
+### 7.2. Funciones con cantidad variable de argumentos
 
 Un parámetro de una función puede recibir una cantidad variable de argumentos (0 o más), como si fuera un "array flexible" pero sin necesidad de pasarlos como un array. Para ello se utiliza la palabra clave `vararg`.
 
@@ -604,7 +711,66 @@ val extra = intArrayOf(4, 5)
 imprimirNumeros(1, 2, 3, *extra, 6)
 ```
 
-### 9.3. Funciones de orden superior
+<a id="apartado-8"></a>
+
+## 8. Funciones lambda
+
+Las funciones lambda son funciones definidas sin un nombre, utilizadas para operaciones simples y rápidas, mejorando la legibilidad del código y el rendimiento.
+
+- **Ejemplo básico:**
+
+```kotlin
+val anunciar = { producto: String -> println("Oferta del día: $producto") }
+anunciar("Cuaderno")  // Salida: Oferta del día: Cuaderno
+```
+
+- **Ejemplo sin parámetros:**
+
+```kotlin
+val decirHola = { println("Hola") }
+decirHola()
+```
+
+- **Ejemplo con múltiples parámetros:**
+
+```kotlin
+val sumar = { a: Int, b: Int -> a + b }
+println(sumar(3, 4))
+```
+
+- **Ejemplo 1 - forEach con IntArray:**
+
+```kotlin
+val numeros = intArrayOf(1, 2, 3, 4, 5)
+numeros.forEach { println(it) }
+```
+
+- **Ejemplo 2 - map para transformar:**
+
+```kotlin
+val numeros = intArrayOf(1, 2, 3)
+val dobles = numeros.map { it * 2 }
+println(dobles)
+```
+
+- **Ejemplo 3 - map + toIntArray():**
+
+```kotlin
+val numeros = intArrayOf(1, 2, 3)
+val doblesArray = numeros.map { it * 2 }.toIntArray()
+```
+
+- **Ejemplo 4 - filter para filtrar elementos:**
+
+```kotlin
+val temperaturas = intArrayOf(18, 25, 29, 21, 32)
+val diasCalurosos = temperaturas.filter { it >= 25 }
+println(diasCalurosos)  // Salida: [25, 29, 32]
+```
+
+<a id="apartado-9"></a>
+
+## 9. Funciones de orden superior
 
 Una **función de orden superior** es una función que **trabaja con funciones como si fueran datos**.
 
@@ -630,11 +796,15 @@ val porTres = crearMultiplicador(3)
 println(porTres(5))
 ```
 
-## 10. POO
+<a id="apartado-10"></a>
+
+## 10. Programación orientada a objetos (POO)
 
 La **Programación Orientada a Objetos (POO)** es una forma de escribir programas donde todo gira en torno a **objetos**. Un **objeto** es una combinación de **datos** (como características o propiedades) y **métodos** (acciones que puede hacer). En POO, usamos **clases** para crear estos objetos.
 
-### Ejemplo 1 - Constructor primario
+<a id="apartado-10-1"></a>
+
+### 10.1. Constructor primario
 
 ```kotlin
 class Estudiante(val nombre: String, val edad: Int) {
@@ -657,7 +827,9 @@ fun main() {
 }
 ```
 
-### Ejemplo 2 - Propiedades dentro del cuerpo
+<a id="apartado-10-2"></a>
+
+### 10.2. Propiedades dentro del cuerpo
 
 ```kotlin
 class Estudiante() {
@@ -684,7 +856,9 @@ fun main() {
 }
 ```
 
-### Ejemplo 3 - constructor secundario
+<a id="apartado-10-3"></a>
+
+### 10.3. constructor secundario
 
 ```kotlin
 class Estudiante {
@@ -704,7 +878,9 @@ class Estudiante {
 }
 ```
 
-### 10.1. Constructor primario + secundario
+<a id="apartado-10-4"></a>
+
+### 10.4. Constructor primario + secundario
 
 ```kotlin
 class Estudiante(val nom: String, val edad: Int, val direccion: String) {
@@ -727,7 +903,9 @@ fun main() {
 }
 ```
 
-### 10.2. getters y setters
+<a id="apartado-10-5"></a>
+
+### 10.5. getters y setters
 
 `get` y `set` son mecanismos para **acceder y modificar propiedades**, y forman parte del **encapsulamiento y control de acceso**. En Kotlin **todas las propiedades (`var`) tienen automáticamente un getter y un setter**.
 
@@ -801,7 +979,9 @@ fun main() {
 }
 ```
 
-### 10.3. Relación entre clases
+<a id="apartado-10-6"></a>
+
+### 10.6. Relación entre clases
 
 Normalmente en una aplicación necesitaremos programar varias clases que se relacionarán unas con otras.
 
@@ -844,7 +1024,9 @@ fun main() {
 }
 ```
 
-### 10.4. Acceso a métodos y propiedades
+<a id="apartado-10-7"></a>
+
+### 10.7. Acceso a métodos y propiedades
 
 En Kotlin todo es público por defecto. Para indicar **quién puede ver o usar** una clase, propiedad o método desde fuera de la clase se utilizan los **modificadores de acceso**.
 
@@ -866,7 +1048,9 @@ fun main() {
 }
 ```
 
-### 10.5. Herencia
+<a id="apartado-10-8"></a>
+
+### 10.8. Herencia
 
 La **Herencia** es un mecanismo por el cual una **clase (subclase)** puede **heredar propiedades y métodos de otra clase (superclase)**.
 Por seguridad, en Kotlin:
@@ -904,7 +1088,9 @@ fun main() {
 }
 ```
 
-### 10.6. Arrays y ArrayLists de objetos
+<a id="apartado-10-9"></a>
+
+### 10.9. Arrays y ArrayLists de objetos
 
 - **Ejemplo 1 - Array de objetos:**
 
@@ -946,7 +1132,9 @@ fun main() {
 }
 ```
 
-### 10.7. Funciones de extensión
+<a id="apartado-10-10"></a>
+
+### 10.10. Funciones de extensión
 
 Las **funciones de extensión** permiten añadir nuevas funciones a clases existentes sin tener que modificarlas ni heredar de ellas.
 
@@ -995,7 +1183,9 @@ fun main() {
 }
 ```
 
-### 10.8. data class
+<a id="apartado-10-11"></a>
+
+### 10.11. data class
 
 Una `data class` es una clase pensada para almacenar datos sin necesidad de implementar funcionalidades.
 
@@ -1024,7 +1214,9 @@ fun main() {
 }
 ```
 
-### 10.9. Sobrecarga de operadores
+<a id="apartado-10-12"></a>
+
+### 10.12. Sobrecarga de operadores
 
 La sobrecarga de operadores permite definir o personalizar el comportamiento de los operadores (+, -, *, ==, etc.) al aplicarse sobre instancias de nuestras propias clases.
 
@@ -1061,62 +1253,9 @@ fun main() {
 }
 ```
 
-## 11. Funciones lambda
+<a id="apartado-11"></a>
 
-Las funciones lambda son funciones definidas sin un nombre, utilizadas para operaciones simples y rápidas, mejorando la legibilidad del código y el rendimiento.
-
-- **Ejemplo básico:**
-
-```kotlin
-val saludar = { nombre: String -> println("Hola, $nombre") }
-saludar("Pol")
-```
-
-- **Ejemplo sin parámetros:**
-
-```kotlin
-val decirHola = { println("Hola") }
-decirHola()
-```
-
-- **Ejemplo con múltiples parámetros:**
-
-```kotlin
-val sumar = { a: Int, b: Int -> a + b }
-println(sumar(3, 4))
-```
-
-- **Ejemplo 1 - forEach con IntArray:**
-
-```kotlin
-val numeros = intArrayOf(1, 2, 3, 4, 5)
-numeros.forEach { println(it) }
-```
-
-- **Ejemplo 2 - map para transformar:**
-
-```kotlin
-val numeros = intArrayOf(1, 2, 3)
-val dobles = numeros.map { it * 2 }
-println(dobles)
-```
-
-- **Ejemplo 3 - map + toIntArray():**
-
-```kotlin
-val numeros = intArrayOf(1, 2, 3)
-val doblesArray = numeros.map { it * 2 }.toIntArray()
-```
-
-- **Ejemplo 4 - filter para filtrar elementos:**
-
-```kotlin
-val numeros = intArrayOf(1, 2, 3, 4, 5)
-val pares = numeros.filter { it % 2 == 0 }
-println(pares)
-```
-
-## 12. Excepciones
+## 11. Excepciones
 
 Una excepción es un error que ocurre en tiempo de ejecución y que interrumpe el flujo normal del programa.
 
@@ -1135,7 +1274,9 @@ fun main() {
 }
 ```
 
-## 13. Package e import
+<a id="apartado-12"></a>
+
+## 12. Package e import
 
 Un **package** es una forma de **agrupar clases, funciones, objetos y otros archivos** relacionados bajo un mismo nombre. La palabra clave **import** se usa para **acceder a clases, funciones u objetos definidos en otros paquetes**.
 

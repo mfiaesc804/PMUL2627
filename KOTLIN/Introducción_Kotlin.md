@@ -1,10 +1,8 @@
 # Introducción a Kotlin
 
-<img src="../../../assets/images/ud01/kotlin_logo_black.png" alt="Logo Kotlin" style="zoom: 30%;" />
-
-## Introducción
-
 Esta unidad presenta los fundamentos de Kotlin mediante explicaciones y ejemplos prácticos, tomando como referencia los conocimientos previos de Java. El recorrido comienza con la organización y ejecución de proyectos y continúa con variables, entrada y salida, estructuras de control y colecciones. Después se trabajan las funciones, las lambdas y la programación orientada a objetos, para terminar con la gestión de excepciones y la organización del código en paquetes.
+
+https://github.com/avidaldo/kotlin-apuntes
 
 ## Objetivos de la unidad
 
@@ -20,30 +18,12 @@ Esta unidad presenta los fundamentos de Kotlin mediante explicaciones y ejemplos
 ## Índice
 
 - [1. Proyectos](#apartado-1)
-  - [1.1. Ejecución de la aplicación](#apartado-1-1)
-  - [1.2. Estructura de carpetas](#apartado-1-2)
-  - [1.3. Compartir proyectos](#apartado-1-3)
 - [2. Variables](#apartado-2)
-  - [2.1. val – Inmutable (no se puede cambiar)](#apartado-2-1)
-  - [2.2. var – Mutable (se puede cambiar)](#apartado-2-2)
-  - [2.3. Tipos de datos](#apartado-2-3)
-  - [2.4. Operadores aritméticos](#apartado-2-4)
-  - [2.5. Valores nulos y seguridad frente a null](#apartado-2-5)
 - [3. Entrada y salida estándar](#apartado-3)
 - [4. Condicionales](#apartado-4)
 - [5. Repeticiones](#apartado-5)
-  - [5.1. while](#apartado-5-1)
-  - [5.2. do-while](#apartado-5-2)
-  - [5.3. for](#apartado-5-3)
-  - [5.4. repeat](#apartado-5-4)
 - [6. Estructuras de datos](#apartado-6)
-  - [6.1. Array](#apartado-6-1)
-  - [6.2. List (lista)](#apartado-6-2)
-  - [6.3. Set (conjunto)](#apartado-6-3)
-  - [6.4. Map (diccionario o mapa)](#apartado-6-4)
 - [7. Funciones](#apartado-7)
-  - [7.1. Funciones locales](#apartado-7-1)
-  - [7.2. Funciones con cantidad variable de argumentos](#apartado-7-2)
 - [8. Funciones lambda](#apartado-8)
 - [9. Funciones de orden superior](#apartado-9)
 - [10. Programación orientada a objetos (POO)](#apartado-10)
@@ -73,7 +53,6 @@ Esta unidad presenta los fundamentos de Kotlin mediante explicaciones y ejemplos
 
 Para ejecutarla hay que hacer clic en el icono **Play**. El proyecto debe tener, al menos, un método `main`, Kotlin utiliza la palabra reservada `fun` para declararlo. El resultado de la ejecución aparecerá por consola (en la parte inferior de la pantalla).
 
-<img src="../../../assets/images/ud01/ud01_11.png" alt="Nuevo proyecto" style="zoom: 50%;" />
 
 <a id="apartado-1-2"></a>
 
@@ -81,7 +60,6 @@ Para ejecutarla hay que hacer clic en el icono **Play**. El proyecto debe tener,
 
 Como vimos en Java, al crear un nuevo proyecto se crea una estructura de carpetas y los archivos fuentes deben estar en la carpeta **src**. En este caso, Kotlin funciona exactamente igual. Para crear una nueva clase o archivo hay que hacer clic con el botón derecho del ratón sobre carpeta **src**, luego hacer clic en **New**, luego clic en **Kotlin File/Class** y por último indicar el nombre.
 
-<img src="../../../assets/images/ud01/ud01_12.png" alt="Nuevo proyecto" style="zoom: 50%;" />
 
 <a id="apartado-1-3"></a>
 
@@ -89,7 +67,6 @@ Como vimos en Java, al crear un nuevo proyecto se crea una estructura de carpeta
 
 Por último vamos a recordar cómo compartir proyectos (para entregar en una tarea de clase, para hacer copia de seguridad, etc). Se realiza desde fuera de IntelliJ utilizando el explorador de archivos del sistema operativo. Para ello hay que localizar la carpeta correspondiente al proyecto y comprimirla.
 
-<img src="../../../assets/images/ud01/ud01_13.png" alt="Nuevo proyecto" style="zoom: 50%;" />
 
 <a id="apartado-2"></a>
 
